@@ -1,7 +1,6 @@
 package cl.duoc.repuestos.service;
 
 import java.util.List;
-import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
@@ -19,9 +18,7 @@ public class RepuestosService {
         if(repuestosRepository.findByNombre(nombre).isPresent()){
             Repuestos repuestos = repuestosRepository.findByNombre(nombre)
                 .orElseThrow(() -> new RuntimeException("not found"));
-            repuestos.setFamilia(familia);
-            repuestos.setComponentes(componentes);
-            repuestos.setNombre(nombre);
+            repuestos.setStock(stock + repuestos.getStock());
             return repuestosRepository.save(repuestos);
         }
         Repuestos repuestos = new Repuestos(null,familia,componentes,nombre,stock);
