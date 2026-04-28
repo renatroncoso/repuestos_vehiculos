@@ -16,3 +16,6 @@ INSERT INTO REPUESTOS VALUES (NULL , 2,
 'carroceria' , 'interior', NULL ,2);
 
 COMMIT;
+
+INSERT INTO repuestos (familia, componentes, nombre, stock) VALUES
+('')
