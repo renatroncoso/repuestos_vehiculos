@@ -23,4 +23,7 @@ public class Repuestos {
     
     @Column(nullable = false, unique = true)
     private String nombre;
+
+    @Column(nullable = false)
+    private int stock;
 }

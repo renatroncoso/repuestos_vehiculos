@@ -8,4 +8,5 @@ import lombok.Data;
 public class RepuestosDTO {
     private Long vin;
     private String nombre;
+    private int stock;
 }
